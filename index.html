@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港金融保险 IP 文案库 · 短视频 / 公众号内容能力展示</title>
+<style>
+  :root{
+    --bg:#0a0e1a;
+    --bg2:#0f1526;
+    --card:#141b30;
+    --card-hover:#1a2338;
+    --line:#26304d;
+    --gold:#d4af37;
+    --gold2:#f0c75e;
+    --gold-soft:rgba(212,175,55,.12);
+    --text:#e8ecf5;
+    --muted:#9aa3b8;
+    --accent:#5b8def;
+    --green:#3ecf8e;
+    --red:#ff6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* 顶部导航 */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    backdrop-filter:blur(12px);
+    background:rgba(10,14,26,.82);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1180px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  }
+  .brand{
+    font-weight:800;letter-spacing:.5px;font-size:17px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .brand .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    box-shadow:0 0 12px var(--gold);
+  }
+  .brand em{color:var(--gold);font-style:normal}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+  .nav-links a{
+    font-size:13.5px;color:var(--muted);padding:6px 12px;border-radius:8px;
+    transition:.2s;
+  }
+  .nav-links a:hover{color:var(--text);background:var(--gold-soft)}
+
+  /* Hero */
+  .hero{
+    max-width:1180px;margin:0 auto;padding:64px 24px 28px;text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;font-size:12.5px;letter-spacing:2px;color:var(--gold2);
+    border:1px solid var(--gold);border-radius:100px;padding:5px 16px;margin-bottom:22px;
+    text-transform:uppercase;
+  }
+  .hero h1{
+    font-size:clamp(30px,5vw,52px);font-weight:900;line-height:1.2;letter-spacing:.5px;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(120deg,var(--gold2),var(--gold) 40%,#fff6d8 70%,var(--gold));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero p.sub{
+    max-width:720px;margin:22px auto 0;color:var(--muted);font-size:16.5px;
+  }
+  .hero .stats{
+    display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px;
+  }
+  .stat{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:16px 26px;min-width:120px;
+  }
+  .stat b{font-size:26px;color:var(--gold2);display:block;font-weight:800}
+  .stat span{font-size:12.5px;color:var(--muted)}
+
+  /* 通用容器 */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  section.block{margin-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+  .sec-head .num{
+    font-family:Georgia,serif;font-size:40px;font-weight:700;color:var(--gold);
+    opacity:.4;line-height:1;
+  }
+  .sec-head h2{font-size:24px;font-weight:800;letter-spacing:.3px}
+  .sec-head .desc{color:var(--muted);font-size:14px;margin-left:auto}
+
+  /* 能力地图卡片 */
+  .map-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .map-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px 22px;transition:.25s;cursor:pointer;
+  }
+  .map-card:hover{
+    background:var(--card-hover);border-color:var(--gold);
+    transform:translateY(-3px);
+  }
+  .map-card .ic{font-size:26px;margin-bottom:12px}
+  .map-card h3{font-size:16.5px;font-weight:700;margin-bottom:8px}
+  .map-card p{font-size:13.5px;color:var(--muted)}
+  .map-card .tag{
+    display:inline-block;margin-top:12px;font-size:11px;color:var(--gold2);
+    background:var(--gold-soft);border-radius:6px;padding:3px 9px;
+  }
+
+  /* 样张卡片 */
+  .samples{display:flex;flex-direction:column;gap:20px}
+  .sample{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    overflow:hidden;transition:.2s;
+  }
+  .sample:hover{border-color:#3a4a75}
+  .sample-top{
+    display:flex;align-items:center;gap:10px;padding:16px 20px;
+    border-bottom:1px solid var(--line);flex-wrap:wrap;
+  }
+  .badge{
+    font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:100px;
+    letter-spacing:.3px;
+  }
+  .badge.type{background:rgba(91,141,239,.15);color:#8fb3ff}
+  .badge.goal{background:rgba(62,207,142,.15);color:var(--green)}
+  .badge.plat{background:rgba(212,175,55,.15);color:var(--gold2)}
+  .sample-top .title{margin-left:auto;font-size:14px;font-weight:700;color:var(--text)}
+  .sample-body{padding:22px 20px}
+  .sample-body .lead{
+    font-size:14px;color:var(--muted);margin-bottom:14px;
+    display:flex;gap:8px;align-items:baseline;
+  }
+  .sample-body .lead b{color:var(--gold2);font-weight:600;white-space:nowrap}
+  .copybox{
+    background:var(--bg2);border:1px solid var(--line);border-radius:12px;
+    padding:18px 18px;white-space:pre-wrap;font-size:14.5px;line-height:1.85;
+    position:relative;
+  }
+  .copybox p{margin:0 0 12px}
+  .copybox p:last-child{margin-bottom:0}
+  .copybox .hl{color:var(--gold2);font-weight:600}
+  .copy-btn{
+    position:absolute;top:10px;right:10px;
+    background:var(--gold-soft);border:1px solid var(--gold);
+    color:var(--gold2);font-size:12px;padding:5px 12px;border-radius:8px;
+    cursor:pointer;transition:.2s;
+  }
+  .copy-btn:hover{background:var(--gold);color:#1a1a1a}
+  .copy-btn.ok{background:var(--green);border-color:var(--green);color:#0a0e1a}
+
+  /* 拆解 */
+  details.why{border-top:1px solid var(--line)}
+  details.why summary{
+    list-style:none;cursor:pointer;padding:14px 20px;
+    font-size:13.5px;color:var(--gold2);font-weight:600;
+    display:flex;align-items:center;gap:8px;
+  }
+  details.why summary::before{content:"▸";transition:.2s;font-size:15px}
+  details.why[open] summary::before{transform:rotate(90deg)}
+  .why-body{padding:4px 20px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .why-item{background:var(--bg2);border-radius:10px;padding:13px 15px}
+  .why-item b{display:block;font-size:12.5px;color:var(--gold2);margin-bottom:5px}
+  .why-item span{font-size:13px;color:var(--muted)}
+
+  /* 标题库表格 */
+  .title-list{display:grid;grid-template-columns:1fr;gap:10px}
+  .tl-row{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:13px 18px;display:flex;align-items:center;gap:14px;transition:.2s;
+  }
+  .tl-row:hover{border-color:var(--gold)}
+  .tl-row .idx{font-family:Georgia,serif;color:var(--gold);font-size:15px;font-weight:700;min-width:26px}
+  .tl-row .t{flex:1;font-size:14.5px}
+  .tl-row .m{font-size:11.5px;color:var(--muted);background:var(--bg2);border-radius:6px;padding:3px 9px;white-space:nowrap}
+
+  /* 方法论 */
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .flow-step{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px;position:relative;
+  }
+  .flow-step .snum{
+    font-family:Georgia,serif;font-size:34px;color:var(--gold);font-weight:700;opacity:.35;
+    position:absolute;top:12px;right:18px;
+  }
+  .flow-step h4{font-size:16px;font-weight:700;margin-bottom:10px;color:var(--gold2)}
+  .flow-step p{font-size:13.5px;color:var(--muted)}
+
+  /* 合规声明 */
+  .notice{
+    background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(212,175,55,.02));
+    border:1px solid var(--gold);border-radius:16px;padding:24px 26px;margin-top:16px;
+  }
+  .notice h3{color:var(--gold2);font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .notice ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .notice li{font-size:13px;color:var(--muted);padding-left:20px;position:relative}
+  .notice li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+
+  footer{
+    margin-top:70px;border-top:1px solid var(--line);padding:32px 24px;text-align:center;
+    color:var(--muted);font-size:13px;
+  }
+  footer b{color:var(--gold2)}
+
+  .back-top{
+    position:fixed;right:26px;bottom:26px;z-index:99;
+    background:var(--card);border:1px solid var(--gold);color:var(--gold2);
+    width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:18px;cursor:pointer;transition:.2s;box-shadow:0 4px 18px rgba(0,0,0,.4);
+  }
+  .back-top:hover{background:var(--gold);color:#1a1a1a}
+
+@media print{
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+  body{background:var(--bg)}
+  .nav,.back-top,.copy-btn{display:none !important}
+  .sample,.map-card,.flow-step,.tl-row,.notice,.copybox,section.block{break-inside:avoid}
+  .hero{page-break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="dot"></span>香港金融保险 <em>IP 文案库</em></div>
+    <div class="nav-links">
+      <a href="#map">能力地图</a>
+      <a href="#script">口播脚本</a>
+      <a href="#title">标题库</a>
+      <a href="#moments">朋友圈</a>
+      <a href="#hook">引流钩子</a>
+      <a href="#talk">转化话术</a>
+      <a href="#objection">异议应答</a>
+      <a href="#method">方法论</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <span class="eyebrow">Content Capability Showcase</span>
+  <h1>让财经 IP 的内容<br><span class="grad">被看见 · 被信任 · 被成交</span></h1>
+  <p class="sub">
+    专为「香港金融保险」赛道定制的文案能力样张库，覆盖短视频、公众号、朋友圈、私域转化全链路。
+    每一个样张都标注了<strong style="color:var(--gold2)">适用场景、写作目的与拆解逻辑</strong>，让客户一眼看清：这不只是会写，而是懂打法。
+  </p>
+  <div class="stats">
+    <div class="stat"><b>6</b><span>核心内容模块</span></div>
+    <div class="stat"><b>30+</b><span>可直接套用样张</span></div>
+    <div class="stat"><b>4</b><span>内容转化环节</span></div>
+    <div class="stat"><b>100%</b><span>合规红线自查</span></div>
+  </div>
+</div>
+
+<!-- 能力地图 -->
+<div class="wrap"><section class="block" id="map">
+  <div class="sec-head">
+    <span class="num">01</span><h2>能力地图</h2>
+    <span class="desc">从「涨粉」到「成交」的完整内容武器库</span>
+  </div>
+  <div class="map-grid">
+    <a class="map-card" href="#script"><div class="ic">🎬</div><h3>短视频口播脚本</h3><p>3 秒钩子 + 干货骨架 + 转化落点，适配抖音/视频号节奏</p><span class="tag">涨粉 · 信任</span></a>
+    <a class="map-card" href="#title"><div class="ic">🔥</div><h3>标题 / 封面文案</h3><p>短视频与公众号双端标题库，按情绪与钩子类型分类</p><span class="tag">点击率 · 完播</span></a>
+    <a class="map-card" href="#moments"><div class="ic">💬</div><h3>朋友圈文案</h3><p>信任型、成交型、日常型，塑造「专业 + 真实」人设</p><span class="tag">信任 · 私域</span></a>
+    <a class="map-card" href="#hook"><div class="ic">🧲</div><h3>引流钩子</h3><p>低成本导流私域的话术与资料诱饵设计</p><span class="tag">涨粉 · 留资</span></a>
+    <a class="map-card" href="#talk"><div class="ic">🤝</div><h3>转化话术</h3><p>从「看了内容」到「开口咨询」的临门一脚</p><span class="tag">转化 · 咨询</span></a>
+    <a class="map-card" href="#objection"><div class="ic">🛡️</div><h3>异议应答</h3><p>香港保险高频质疑的合规回应话术库</p><span class="tag">信任 · 成交</span></a>
+  </div>
+</section></div>
+
+<!-- 口播脚本 -->
+<div class="wrap"><section class="block" id="script">
+  <div class="sec-head">
+    <span class="num">02</span><h2>短视频口播脚本</h2>
+    <span class="desc">口播节奏：前 3 秒定生死，中段给价值，结尾留钩子</span>
+  </div>
+  <a href="scripts.html" style="display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,rgba(212,175,55,.12),rgba(212,175,55,.03));border:1px solid var(--gold);border-radius:14px;padding:18px 22px;margin-bottom:20px;transition:.2s">
+    <span style="font-size:28px">📚</span>
+    <span style="flex:1">
+      <b style="font-size:16px;color:var(--gold2);display:block">完整 50 套口播脚本库（另册 · 含 8 套 3 分钟深度长视频）</b>
+      <span style="font-size:13.5px;color:var(--muted)">财经新闻解读 · 保险资讯 · 避坑揭秘 · 情绪共鸣，标注时间轴，一键复制 →</span>
+    </span>
+    <span style="font-size:22px;color:var(--gold2)">→</span>
+  </a>
+  <div class="samples">
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">情绪钩子型</span>
+        <span class="badge goal">涨粉 / 完播</span>
+        <span class="badge plat">抖音 · 视频号</span>
+        <span class="title">为什么有钱人都在悄悄配置美元保单</span>
+      </div>
+      <div class="sample-body">
+        <div class="lead"><b>适配时长</b>约 45 秒 · 快节奏口播</div>
+        <div class="copybox" id="c1">
+<p><span class="hl">【0-3秒 钩子】</span>同样存 100 万，十年后能差出一套房——这笔账，90% 的人从来没算明白。</p>
+<p><span class="hl">【3-15秒 反差】</span>你把钱放银行，利率一路往下走；聪明人把它换成了美元计价的资产，让钱跟着全球利率跑。</p>
+<p><span class="hl">【15-35秒 干货】</span>香港的储蓄分红险，本质就是一份「用美元计价 + 长期复利」的资产。它不承诺暴富，但能帮你对冲两件事：一是人民币汇率的波动，二是手里现金被通胀慢慢稀释。</p>
+<p><span class="hl">【35-45秒 落点】</span>不是让你马上买，而是先搞懂规则再决定。关注我，下一期讲：香港保单的「分红实现率」到底怎么看，别被销售话术带偏。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c1',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>钩子逻辑</b><span>用「同样存100万，差出一套房」制造数字反差，直击中产的钱焦虑，前3秒就锁定停留。</span></div>
+          <div class="why-item"><b>情绪点</b><span>「利率一路往下」「钱被稀释」唤醒损失厌恶，比讲收益更能让人看下去。</span></div>
+          <div class="why-item"><b>合规处理</b><span>强调「不承诺暴富」「先搞懂规则再决定」，把「卖货」包装成「科普」，既合规又涨信任。</span></div>
+          <div class="why-item"><b>转化落点</b><span>结尾用「关注看下期」做系列钩子，把单条流量变成账号资产，而非硬推产品。</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">干货型</span>
+        <span class="badge goal">信任 / 专业度</span>
+        <span class="badge plat">抖音 · 视频号 · 公众号</span>
+        <span class="title">分红实现率：香港保单最重要的一个数字</span>
+      </div>
+      <div class="sample-body">
+        <div class="lead"><b>适配时长</b>约 60 秒 · 中速口播</div>
+        <div class="copybox" id="c2">
+<p><span class="hl">【0-3秒 钩子】</span>买香港储蓄险，销售给你看的那张收益表，可能根本不是你能拿到的钱。</p>
+<p><span class="hl">【3-18秒 定义】</span>计划书上的数字叫「预期演示」，是保险公司按假设算出来的。真正该看的，是它历史上「承诺了多少、实际给了多少」——这个比例，就叫分红实现率。</p>
+<p><span class="hl">【18-40秒 干货】</span>香港保监局要求所有公司公开披露这个数据，你上官网就能查。一家公司如果连续十年实现率都在 95% 以上，说明它「说到的、基本做到了」；如果长期只有七八十，那计划书再漂亮，也要打个问号。</p>
+<p><span class="hl">【40-55秒 行动】</span>记住一句话：买储蓄险，选公司比选产品更重要，看实现率比看收益表更靠谱。</p>
+<p><span class="hl">【55-60秒 落点】</span>需要《香港主流保险公司分红实现率对照表》的朋友，评论区扣「实现率」，我发你。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c2',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>信任打法</b><span>主动「拆穿」行业常见的信息差，站在消费者一侧，反而建立远超硬广的信任。</span></div>
+          <div class="why-item"><b>专业度</b><span>提到「保监局要求披露」「实现率定义」等具体监管事实，坐实「懂行」人设。</span></div>
+          <div class="why-item"><b>私域钩子</b><span>用「资料对照表」做诱饵，把公域流量导到评论区/私域，是标准留资动作。</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">情绪共鸣型</span>
+        <span class="badge goal">涨粉 / 共鸣</span>
+        <span class="badge plat">视频号 · 小红书</span>
+        <span class="title">中年人的安全感，是给家庭兜底</span>
+      </div>
+      <div class="sample-body">
+        <div class="lead"><b>适配时长</b>约 40 秒 · 慢节奏、有情感</div>
+        <div class="copybox" id="c3">
+<p><span class="hl">【0-3秒 钩子】</span>人到中年才发现，最贵的不是房子，是「万一」。</p>
+<p><span class="hl">【3-20秒 共情】</span>父母老了、孩子还小、房贷还在还。你拼命赚钱，是因为心里清楚：这个家，不能有任何环节突然掉链子。</p>
+<p><span class="hl">【20-35秒 价值】</span>所以越来越多人，会单独留出一笔钱，去配置一份美元计价的储蓄险。不是为了搏收益，而是给未来二十年的家庭现金流，上一道保险。</p>
+<p><span class="hl">【35-40秒 落点】</span>这笔钱怎么留、留多少合适？关注我，我用最简单的话，帮你把家庭资产的底层逻辑讲清楚。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c3',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>目标人群</b><span>30-45 岁中产、上有老下有小，是香港储蓄/重疾险的核心客群。</span></div>
+          <div class="why-item"><b>情绪策略</b><span>不讲产品讲「责任」，把保险包装成对家人的爱，降低推销感、提升转发动机。</span></div>
+          <div class="why-item"><b>平台适配</b><span>视频号/小红书受众更吃「情绪 + 真实」，慢节奏口播比快节奏更契合。</span></div>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section></div>
+
+<!-- 标题库 -->
+<div class="wrap"><section class="block" id="title">
+  <div class="sec-head">
+    <span class="num">03</span><h2>标题 / 封面文案库</h2>
+    <span class="desc">好的标题决定 80% 的点击，这里按情绪分类，可直接上封面</span>
+  </div>
+
+  <h3 style="font-size:15px;color:var(--gold2);margin:18px 0 12px">短视频标题 · 按钩子类型</h3>
+  <div class="title-list">
+    <div class="tl-row"><span class="idx">1</span><span class="t">年化 6% 的美元储蓄，是机会还是陷阱？</span><span class="m">悬念反转型</span></div>
+    <div class="tl-row"><span class="idx">2</span><span class="t">我劝你：千万别急着买香港保险</span><span class="m">逆向人设型</span></div>
+    <div class="tl-row"><span class="idx">3</span><span class="t">同样 100 万，有人 10 年翻倍，有人原地踏步</span><span class="m">数字反差型</span></div>
+    <div class="tl-row"><span class="idx">4</span><span class="t">内地中产，正在用美元保单「藏」一笔钱</span><span class="m">圈层窥探型</span></div>
+    <div class="tl-row"><span class="idx">5</span><span class="t">买香港储蓄险前，先问自己这 3 个问题</span><span class="m">清单干货型</span></div>
+    <div class="tl-row"><span class="idx">6</span><span class="t">销售不会告诉你的香港保险 4 个坑</span><span class="m">揭秘避坑型</span></div>
+  </div>
+
+  <h3 style="font-size:15px;color:var(--gold2);margin:24px 0 12px">公众号标题 · 按情绪分类</h3>
+  <div class="title-list">
+    <div class="tl-row"><span class="idx">1</span><span class="t">拆解一份香港保单：它到底是怎么帮你对抗通胀的？</span><span class="m">认知升级型</span></div>
+    <div class="tl-row"><span class="idx">2</span><span class="t">人民币 vs 美元：普通人该怎么给家庭资产「分仓」？</span><span class="m">解决方案型</span></div>
+    <div class="tl-row"><span class="idx">3</span><span class="t">赴港投保全流程复盘：从签约到理赔，我踩过的坑</span><span class="m">经验复盘型</span></div>
+    <div class="tl-row"><span class="idx">4</span><span class="t">为什么越有钱的人，越在意「分红实现率」这个数字？</span><span class="m">圈层对标型</span></div>
+    <div class="tl-row"><span class="idx">5</span><span class="t">香港重疾险 vs 内地重疾险，一张表说清楚怎么选</span><span class="m">对比工具型</span></div>
+    <div class="tl-row"><span class="idx">6</span><span class="t">把 50 万换成美元资产，5 年后会怎样？</span><span class="m">情景推演型</span></div>
+  </div>
+</section></div>
+
+<!-- 朋友圈 -->
+<div class="wrap"><section class="block" id="moments">
+  <div class="sec-head">
+    <span class="num">04</span><h2>朋友圈文案</h2>
+    <span class="desc">私域不是刷屏卖货，而是持续输出「专业 + 真实」的人设</span>
+  </div>
+  <div class="samples">
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">信任建立型</span>
+        <span class="badge goal">人设 · 信任</span>
+        <span class="badge plat">朋友圈</span>
+        <span class="title">日常专业输出</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c4">
+<p>今天帮一位客户查分红实现率，顺便把香港几家主流公司近 10 年的数据都拉了一遍。</p>
+<p>有个感受挺深的：那些计划书做得再漂亮、收益演示再高的，真到实现率上一查，高下立现。</p>
+<p>所以我还是那句话——买储蓄险，先看公司，再看产品，最后才看收益表。</p>
+<p>数据我都整理好了，需要的朋友私我，免费发你。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c4',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>人设塑造</b><span>「帮客户查数据」展现一线实操，「近10年都拉了一遍」体现专业与勤勉。</span></div>
+          <div class="why-item"><b>软性留资</b><span>结尾免费送资料，把朋友圈的「围观者」悄悄转化为「私聊者」。</span></div>
+          <div class="why-item"><b>节奏控制</b><span>不硬推产品，用观点+福利做日常渗透，避免被屏蔽。</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">成交引导型</span>
+        <span class="badge goal">转化 · 预约</span>
+        <span class="badge plat">朋友圈</span>
+        <span class="title">限量名额 / 案例见证</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c5">
+<p>上周做了 3 个家庭方案，有 2 个是孩子还在上幼儿园的中产家庭。</p>
+<p>他们共同的需求其实就一句：<b>「万一我不在了，这个家不能乱。」</b></p>
+<p>这周我只约 5 个免费的一对一方案名额，帮你把家庭的保障和资产配置理清楚。约满即止，私我留名额。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c5',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>稀缺感</b><span>「只约5个名额」制造紧迫，但保持克制不油腻。</span></div>
+          <div class="why-item"><b>案例背书</b><span>用「真实家庭案例 + 一句戳心需求」做情感锚点，比自夸可信。</span></div>
+          <div class="why-item"><b>低门槛邀约</b><span>「免费一对一方案」把成交拆成「先聊需求」，降低开口压力。</span></div>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section></div>
+
+<!-- 引流钩子 -->
+<div class="wrap"><section class="block" id="hook">
+  <div class="sec-head">
+    <span class="num">05</span><h2>引流钩子 / 涨粉文案</h2>
+    <span class="desc">用「资料诱饵」把公域流量低成本导到私域</span>
+  </div>
+  <div class="samples">
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">资料诱饵型</span>
+        <span class="badge goal">留资 · 涨粉</span>
+        <span class="badge plat">评论区 · 主页 · 私信</span>
+        <span class="title">高频诱饵话术</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c6">
+<p>① 需要《香港主流保险公司分红实现率对照表》的朋友，评论区扣「<span class="hl">实现率</span>」，我私发你。</p>
+<p>② 我把「赴港投保全流程避坑清单」整理成了一份 PDF，想要的朋友扣「<span class="hl">避坑</span>」。</p>
+<p>③ 不知道家里该配多少保障？私信发我「<span class="hl">方案</span>」，帮你免费做一次家庭保障需求分析。</p>
+<p>④ 关注我，后台回复「<span class="hl">测评</span>」，领一份香港重疾险的横向对比表。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c6',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>诱饵设计</b><span>资料必须「有用、具体、低成本」，且与后续转化强相关（实现率→选公司，避坑→信任）。</span></div>
+          <div class="why-item"><b>动作极简</b><span>统一用「扣关键词」这种单字互动，降低粉丝操作成本，评论区互动还能撬动流量推荐。</span></div>
+          <div class="why-item"><b>合规边界</b><span>只承诺「资料/分析」，不承诺收益，规避金融营销红线。</span></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section></div>
+
+<!-- 转化话术 -->
+<div class="wrap"><section class="block" id="talk">
+  <div class="sec-head">
+    <span class="num">06</span><h2>转化话术</h2>
+    <span class="desc">从「看了内容」到「开口咨询」的临门一脚</span>
+  </div>
+  <div class="samples">
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">私聊破冰 → 预约</span>
+        <span class="badge goal">转化 · 咨询</span>
+        <span class="badge plat">私信 / 微信</span>
+        <span class="title">标准转化三段式</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c7">
+<p><span class="hl">【第一句·承接】</span>你好呀，资料已经发你了 👌 你先看，有什么看不懂的地方随时问我，我帮你讲明白。</p>
+<p><span class="hl">【第二句·挖需求】</span>顺便问一下，你是想给<b>自己/孩子</b>做长期储蓄，还是主要考虑<b>健康保障</b>这块？我按你的实际情况帮你看看，比看资料更省心。</p>
+<p><span class="hl">【第三句·低门槛邀约】</span>这样吧，我这两天有空，花 15 分钟帮你把需求理一遍，出一个大方向——<b>不收任何费用</b>，聊完你自己判断，觉得不合适也没关系。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c7',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>降低防备</b><span>先「发资料」兑现承诺，再「不收费、不合适没关系」消除成交压力。</span></div>
+          <div class="why-item"><b>挖掘需求</b><span>用二选一（储蓄 vs 保障）代替开放式提问，客户更容易回答，也更快锁定需求。</span></div>
+          <div class="why-item"><b>拆解成交</b><span>把「成交」拆成「先约一次15分钟咨询」，大幅降低开口门槛。</span></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section></div>
+
+<!-- 异议应答 -->
+<div class="wrap"><section class="block" id="objection">
+  <div class="sec-head">
+    <span class="num">07</span><h2>异议应答话术库</h2>
+    <span class="desc">香港保险的高频质疑，用「共情 + 事实 + 软引导」合规回应</span>
+  </div>
+  <div class="samples">
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">高频异议</span>
+        <span class="badge goal">信任 · 成交</span>
+        <span class="badge plat">私聊 / 评论区</span>
+        <span class="title">「香港保险理赔会不会很麻烦？」</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c8">
+<p><span class="hl">【共情】</span>这个担心太正常了，毕竟隔着一道关，谁都不想买了最后理赔卡住。</p>
+<p><span class="hl">【事实】</span>其实香港保单的理赔流程很简单：出险后把资料邮寄或线上提交给保险公司，审核通过后直接转账到你香港的银行账户。重疾险大多支持「确诊即赔」，不需要等治疗结束。</p>
+<p><span class="hl">【软引导】</span>真正要注意的不是「麻烦」，而是投保时<b>健康告知要如实</b>，这比什么都重要。你把情况告诉我，我帮你看清楚，避免将来理赔出问题。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c8',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>先共情</b><span>不急着反驳，先承认「担心正常」，把对立变成同频。</span></div>
+          <div class="why-item"><b>讲事实</b><span>用具体流程（邮寄/线上、确诊即赔）替代空泛保证，可信度更高。</span></div>
+          <div class="why-item"><b>合规红线</b><span>主动强调「如实健康告知」，既专业又规避后续纠纷，反而加分。</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">高频异议</span>
+        <span class="badge goal">信任 · 成交</span>
+        <span class="badge plat">私聊 / 评论区</span>
+        <span class="title">「钱投进去，万一拿不回来怎么办？」</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c9">
+<p><span class="hl">【共情】</span>我特别理解，长期储蓄险最怕的就是「要用钱的时候拿不出来」。</p>
+<p><span class="hl">【事实】</span>所以买之前一定要分清两个概念：<b>退保现金价值</b>和<b>预期分红</b>。前几年退保大概率会亏，这是它「长期属性」的代价；但持有到一定年限后，现金价值会逐步追上并超过已交保费，之后可以部分提取或保单贷款应急。</p>
+<p><span class="hl">【软引导】</span>关键是你这笔钱是「短期要用」还是「长期放着」。如果是短期，我不建议买储蓄险；如果确定是给未来留的，我再帮你算清楚第几年回本、怎么取最划算。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c9',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>不硬推销</b><span>主动说「短期用不建议买」，站在客户利益侧，反而建立深度信任。</span></div>
+          <div class="why-item"><b>讲清规则</b><span>把「退保现金价值 vs 预期分红」讲透，消除信息不对称带来的恐惧。</span></div>
+          <div class="why-item"><b>合规表达</b><span>不提「保证收益」，用「回本」「现金价值」等中性词，守住监管底线。</span></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-top">
+        <span class="badge type">高频异议</span>
+        <span class="badge goal">信任 · 成交</span>
+        <span class="badge plat">私聊 / 评论区</span>
+        <span class="title">「香港保险公司会不会倒闭？」</span>
+      </div>
+      <div class="sample-body">
+        <div class="copybox" id="c10">
+<p><span class="hl">【共情】</span>这是很多人最本能的第一反应，毕竟钱是要放几十年的。</p>
+<p><span class="hl">【事实】</span>香港是全球最成熟的保险市场之一，监管（香港保监局）要求保险公司维持充足的偿付能力，并且有「保单持有人保障」机制。历史上还没有出现过保单持有人因公司问题而血本无归的情况。</p>
+<p><span class="hl">【软引导】</span>所以核心还是回到那句：<b>选一家偿付能力稳、历史分红实现率高的公司</b>，比纠结「会不会倒闭」更实际。这块我可以帮你对比。</p>
+        </div>
+        <button class="copy-btn" onclick="copy('c10',this)">复制</button>
+      </div>
+      <details class="why"><summary>拆解：为什么这么写</summary>
+        <div class="why-body">
+          <div class="why-item"><b>化解恐惧</b><span>用「成熟市场 + 监管机制 + 历史事实」三层证据，回应而非回避。</span></div>
+          <div class="why-item"><b>合规谨慎</b><span>用「历史上没有出现」而非「绝对不会倒闭」，措辞留有余地，专业且不违规。</span></div>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section></div>
+
+<!-- 方法论 -->
+<div class="wrap"><section class="block" id="method">
+  <div class="sec-head">
+    <span class="num">08</span><h2>内容方法论：钩子 → 信任 → 转化</h2>
+    <span class="desc">所有样张背后，是一套可复制的财经 IP 内容飞轮</span>
+  </div>
+  <div class="flow">
+    <div class="flow-step"><span class="snum">A</span><h4>钩子层 · 被看见</h4><p>用「数字反差、悬念反转、圈层窥探」制造 3 秒停留。核心目标不是讲产品，而是让目标人群「对号入座」。</p></div>
+    <div class="flow-step"><span class="snum">B</span><h4>信任层 · 被相信</h4><p>用「干货、拆穿信息差、真实案例、监管事实」塑造专业人设。信任是金融内容的第一资产，先给价值再谈转化。</p></div>
+    <div class="flow-step"><span class="snum">C</span><h4>转化层 · 被成交</h4><p>用「资料诱饵、低门槛邀约、限时名额」把公域流量导入私域，再通过「共情+事实+软引导」完成临门一脚。</p></div>
+    <div class="flow-step"><span class="snum">D</span><h4>合规层 · 走得远</h4><p>全程守住金融营销红线：不承诺收益、不夸大演示、如实健康告知。合规不是束缚，是 IP 活下去的底线。</p></div>
+  </div>
+
+  <div class="notice">
+    <h3>⚠️ 合规与专业声明（谈单时的加分项）</h3>
+    <ul>
+      <li>所有样张均规避「保证收益」「稳赚不赔」等绝对化表述，用「预期演示 / 历史分红实现率 / 现金价值」等中性措辞。</li>
+      <li>涉及香港保险内容，主动提示「分红不确定」「前几年退保可能亏损」「赴港投保需本人赴港签约」等风险点。</li>
+      <li>文案定位为「科普 + 需求分析」，而非兜售，符合内地及香港金融营销的合规导向。</li>
+      <li>本库为能力展示样张，实际交付将根据客户人设、粉丝画像、监管最新要求逐条定制。</li>
+    </ul>
+  </div>
+</section></div>
+
+<footer>
+  香港金融保险 IP 文案库 · 内容能力展示样张 <b>|</b> 所有文案为演示用途，实际交付按需定制
+</footer>
+
+<div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+  function copy(id, btn){
+    var el = document.getElementById(id);
+    var txt = el.innerText;
+    navigator.clipboard.writeText(txt).then(function(){
+      var old = btn.textContent;
+      btn.textContent = "已复制 ✓";
+      btn.classList.add("ok");
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove("ok"); }, 1500);
+    }).catch(function(){
+      // 降级方案
+      var ta = document.createElement("textarea");
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand("copy"); btn.textContent = "已复制 ✓"; }
+      catch(e){ btn.textContent = "复制失败"; }
+      setTimeout(function(){ btn.textContent = "复制"; }, 1500);
+      document.body.removeChild(ta);
+    });
+  }
+</script>
+<script>window.addEventListener("beforeprint",function(){document.querySelectorAll("details").forEach(function(d){d.open=true})});</script>
+</body>
+</html>
